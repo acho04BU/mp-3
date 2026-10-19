@@ -2,11 +2,11 @@ let output = document.getElementById('output') as HTMLElement;
 
 console.log(output);
 
-function jarvis_says(x:string,setOutput){
+function jarvis_says(x:string,setOutput:any){
     setOutput("Jarvis says: " + x);
 }
 
-function computer(op:string,first:number,second:number,setFirst,setSecond,setOutput){
+function computer(op:string,first:number,second:number,setFirst: (arg0: number) => void, setSecond: (arg0: number) => void, setOutput: (arg0: string) => void){
     let x = 0;
     if (isNaN(Number(first))|| isNaN(Number(second))){
         jarvis_says("Invalid input(s)",setOutput);
@@ -55,7 +55,7 @@ function computer(op:string,first:number,second:number,setFirst,setSecond,setOut
 
 }
 
-export default function Calculator(op:string,first:number,second:number,setFirst,setSecond,setOutput){
+export default function Calculator(op:string,first:number,second:number,setFirst: (arg0: number) => void, setSecond: (arg0: number) => void, setOutput: (arg0: string) => void){
     try{
         computer(op,first,second,setFirst,setSecond,setOutput);
     }catch(error){
