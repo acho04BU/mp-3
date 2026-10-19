@@ -1,11 +1,9 @@
-import {Context} from "./App.tsx";
 import './App.css'
-import {useContext} from "react";
 
 
 export default function Experiences() {
-    const setData = useContext(Context)[1];
-    setData("Experiences");
+    document.title='Experiences | Resume';
+
     return (
         <>
             <main>

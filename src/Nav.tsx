@@ -1,10 +1,5 @@
-import Index from "./Index.tsx";
-import Experiences from "./Experiences.tsx";
-import Education from "./Education.tsx";
-import Research from "./Research.tsx";
-import References from "./References.tsx";
-import Projects from "./Projects.tsx";
-import {Link, Routes, Route} from "react-router";
+
+import {Link} from "react-router";
 
 
 export default function Nav () {
@@ -21,14 +16,7 @@ export default function Nav () {
                     <li><Link to={"/projects"}>Projects</Link></li>
                 </ul>
             </nav>
-            <Routes>
-                <Route path={"/"} element={<Index/>}/>
-                <Route path={"/education"} element={<Education/>}/>
-                <Route path={"/experiences"} element={<Experiences/>}/>
-                <Route path={"/research"} element={<Research/>}/>
-                <Route path={"/references"} element={<References />}/>
-                <Route path={"/projects"} element={<Projects/>}/>
-            </Routes>
+
         </>
     )
 }

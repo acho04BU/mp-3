@@ -1,10 +1,8 @@
 import './App.css'
-import {Context} from "./App.tsx";
-import {useContext} from "react";
 
 export default function Research(){
-    const setData = useContext(Context)[1];
-    setData("Research");
+    document.title='Research | Resume';
+
     return (
         <>
             <main>

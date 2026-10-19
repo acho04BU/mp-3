@@ -2,13 +2,10 @@ import stuyvesant from "./assets/stuyvesant.svg";
 import bostonUniversity from "./assets/Boston_University_seal.svg";
 
 import './App.css'
-import {useContext} from "react";
-import {Context} from "./App.tsx";
 
 
 export default function Education() {
-    const setData = useContext(Context)[1];
-    setData("Education");
+    document.title='Education | Resume';
     return (
         <>
             <main>

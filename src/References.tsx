@@ -1,11 +1,9 @@
-import {Context} from "./App.tsx";
 import './App.css'
-import {useContext} from "react";
 
 
 export default function References() {
-    const setData = useContext(Context)[1];
-    setData("References");
+    document.title='References | Resume';
+
     return (
         <>
             <main>

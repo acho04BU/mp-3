@@ -1,33 +1,45 @@
-import {Context} from "./App.tsx";
 import './App.css'
 import Calculator from "./Calculator.tsx";
-import {useContext} from "react";
+import {useState} from "react";
 
 export default function Projects() {
-    const setData = useContext(Context)[1];
-    setData("Projects");
+    document.title='Projects | Resume';
+
+    const [first, setFirst] = useState(0);
+    const [second, setSecond]= useState(0);
+    const [output, setOutput]=useState('');
+
     return (
         <>
             <main>
                 <div id="helmet-wrapper">
                     <div id="calc-wrapper">
                         <div id="input-wrapper">
-                            <label htmlFor="first-input"></label><input id="first-input"/>
-                            <label htmlFor="second-input"></label><input id="second-input"/>
+                            <label htmlFor="first-input"></label>
+                            <input
+                                id="first-input"
+                                value={first}
+                                onChange={(e) => {setFirst(Number(e.target.value))}}
+                            />
+                            <label htmlFor="second-input"></label>
+                            <input
+                                id="second-input"
+                                value={second}
+                                onChange={(e) => {setSecond(Number(e.target.value))}}
+                            />
                         </div>
                         <div id="buttons-wrapper">
-                            <button onClick={() => Calculator("add")}>+</button>
-                            <button onClick={() => Calculator("subtract")}>-</button>
-                            <button onClick={() => Calculator("multiply")}>*</button>
-                            <button onClick={() => Calculator("divide")}>/</button>
-                            <button onClick={() => Calculator("power")}>**</button>
-                            <button onClick={() => Calculator("clear")}>clear</button>
-
+                            <button onClick={() => Calculator("add",first,second,setFirst,setSecond,setOutput)}>+</button>
+                            <button onClick={() => Calculator("subtract",first,second,setFirst,setSecond,setOutput)}>-</button>
+                            <button onClick={() => Calculator("multiply",first,second,setFirst,setSecond,setOutput)}>*</button>
+                            <button onClick={() => Calculator("divide",first,second,setFirst,setSecond,setOutput)}>/</button>
+                            <button onClick={() => Calculator("power",first,second,setFirst,setSecond,setOutput)}>**</button>
+                            <button onClick={() => Calculator("clear",first,second,setFirst,setSecond,setOutput)}>clear</button>
                         </div>
                     </div>
                 </div>
                 <div id="aligner">
-                    <p id="output"></p>
+                    <p id="output">{output}</p>
                 </div>
             </main>
         </>

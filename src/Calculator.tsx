@@ -1,62 +1,63 @@
-let firstInput = document.getElementById('first-input') as HTMLInputElement;
-let secondInput = document.getElementById('second-input') as HTMLInputElement;
 let output = document.getElementById('output') as HTMLElement;
 
-function jarvis_says(x:string){
-    output.innerHTML = "Jarvis says: " + x;
+console.log(output);
+
+function jarvis_says(x:string,setOutput){
+    setOutput("Jarvis says: " + x);
 }
 
-function computer(op:string){
+function computer(op:string,first:number,second:number,setFirst,setSecond,setOutput){
     let x = 0;
-    if (firstInput.value === '' || secondInput.value === '' || isNaN(Number(firstInput.value))|| isNaN(Number(secondInput.value))){
-        jarvis_says("Invalid input(s)");
+    if (isNaN(Number(first))|| isNaN(Number(second))){
+        jarvis_says("Invalid input(s)",setOutput);
         throw new Error ("Invalid input");
-    }else if (op ==="divide" && Number(secondInput.value) === 0){
-        jarvis_says("Divide by 0");
+    }else if (op ==="divide" && Number(second) === 0){
+        jarvis_says("Divide by 0",setOutput);
         throw new Error ("Divide by 0");
     }
     switch(op){
         case "add":
-            x = Number(firstInput.value) + Number(secondInput.value);
+            x = Number(first) + Number(second);
             break;
         case "subtract":
-            x = Number(firstInput.value) - Number(secondInput.value);
+            x = Number(first) - Number(second);
             break;
         case "multiply":
-            x = Number(firstInput.value) * Number(secondInput.value);
+            x = Number(first) * Number(second);
             break;
         case "divide":
-            x = Number(firstInput.value) / Number(secondInput.value);
+            x = Number(first) / Number(second);
             break;
         case "power":
-            if (Number(secondInput.value) >= 0){
+            if (Number(second) >= 0){
                 x = 1;
-                for (let i = 0; i < Number(secondInput.value); i++){
-                    x *= Number(firstInput.value);
+                for (let i = 0; i < Number(second); i++){
+                    x *= Number(first);
                 }
             }else{
                 x = 1;
-                for (let i = 0; i > Number(secondInput.value); i--){
-                    x /= Number(firstInput.value);
+                for (let i = 0; i > Number(second); i--){
+                    x /= Number(first);
                 }
             }
             break;
         case "clear":
-            firstInput.value = "";
-            secondInput.value = "";
-            output.innerHTML = "";
+            setFirst(0);
+            setSecond(0);
+            setOutput("");
             break;
     }
     if(op !== "clear"){
-        jarvis_says(String(x));
-        if (x < 0) output.style.color = "red";
+        //if (x < 0) output.style.color = "red";
+        jarvis_says(String(x),setOutput);
+        console.log(x);
     }
 
 }
 
-export default function Calculator(op:string){
+export default function Calculator(op:string,first:number,second:number,setFirst,setSecond,setOutput){
     try{
-        computer(op)
+        computer(op,first,second,setFirst,setSecond,setOutput);
     }catch(error){
         console.log(error);
     }
