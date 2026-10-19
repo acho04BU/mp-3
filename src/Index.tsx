@@ -1,13 +1,13 @@
 import './App.css'
 import {setData} from "./App.tsx"
-
+import photo from "./assets/alex_cho_photo.jpeg";
 
 export default function Index() {
     setData("Index");
     return (
         <>
             <main>
-                <img src="src/alex_cho_photo.jpeg" alt="Alex Cho"/>
+                <img src={photo} alt="Alex Cho"/>
                 <p>
                     Hello! My name is Alex Cho, and I am a student at Boston University studying Computer Science.
                     I'm currently planned to graduate in the Spring of 2028, and I'm interested in learning software and

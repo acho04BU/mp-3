@@ -1,6 +1,6 @@
 import {setData} from "./App.tsx";
 import './App.css'
-
+import Calculator from "./Calculator.tsx";
 
 export default function Projects() {
     setData("Projects");
@@ -14,12 +14,12 @@ export default function Projects() {
                             <label htmlFor="second-input"></label><input id="second-input"/>
                         </div>
                         <div id="buttons-wrapper">
-                            <button onClick="addition()">+</button>
-                            <button onClick="subtraction()">-</button>
-                            <button onClick="multiplication()">*</button>
-                            <button onClick="division()">/</button>
-                            <button onClick="power()">**</button>
-                            <button onClick="clearInput()">clear</button>
+                            <button onClick={() => Calculator("add")}>+</button>
+                            <button onClick={() => Calculator("subtract")}>-</button>
+                            <button onClick={() => Calculator("multiply")}>*</button>
+                            <button onClick={() => Calculator("divide")}>/</button>
+                            <button onClick={() => Calculator("power")}>**</button>
+                            <button onClick={() => Calculator("clear")}>clear</button>
 
                         </div>
                     </div>
