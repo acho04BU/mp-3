@@ -1,8 +1,10 @@
-import {setData} from "./App.tsx";
+import {Context} from "./App.tsx";
 import './App.css'
 import Calculator from "./Calculator.tsx";
+import {useContext} from "react";
 
 export default function Projects() {
+    const setData = useContext(Context)[1];
     setData("Projects");
     return (
         <>

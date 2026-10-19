@@ -1,7 +1,9 @@
 import './App.css'
-import {setData} from "./App.tsx";
+import {Context} from "./App.tsx";
+import {useContext} from "react";
 
 export default function Research(){
+    const setData = useContext(Context)[1];
     setData("Research");
     return (
         <>

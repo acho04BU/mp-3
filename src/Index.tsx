@@ -1,9 +1,12 @@
 import './App.css'
-import {setData} from "./App.tsx"
+import {useContext} from "react";
 import photo from "./assets/alex_cho_photo.jpeg";
 
+import {Context} from "./App.tsx";
+
 export default function Index() {
-    setData("Index");
+    const setData = useContext(Context)[1];
+    setData("Home");
     return (
         <>
             <main>
