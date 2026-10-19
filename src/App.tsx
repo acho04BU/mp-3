@@ -3,9 +3,9 @@ import Nav from './Nav.tsx'
 import Footer from './Footer.tsx'
 import './App.css'
 import {createBrowserRouter, RouterProvider} from "react-router";
-import {createContext} from 'react';
+import {useState} from 'react';
 
-export const UserContext = createContext("Index");
+export const [data, setData] = useState("Index");
 
 
 export default function App() {

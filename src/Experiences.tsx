@@ -1,11 +1,50 @@
-
+import {setData} from "./App.tsx";
 import './App.css'
 
 
 export default function Experiences() {
+    setData("Experiences");
     return (
         <>
+            <main>
+                <h3>COMPUTER SCIENCE</h3>
+                <h4>
+                    Intern, Hunet AI Department Summer 2022
+                </h4>
+                <h5>
+                    Developed a website that evaluates a person’s leadership based on others’ short responses to
+                    questions about the given person. Also incorporated a multiple-choice section to assist in machine
+                    learning.
+                </h5>
+                <br/>
+                <h4>
+                    Marketing Team Director, Stuy Hacks (school coding club and annual competition) 09/2021 - 06/2022
+                </h4>
+                <h5>
+                    Promoted the major hackathon hosted at Stuyvesant to other NYC schools. Participants develop
+                    projects in the field of Computer Science - the event is mostly for experienced programmers and is
+                    regularly held in January.
 
+                </h5>
+                <br/>
+                <h4>
+                    Member, Stuyvesant Competitive Computing Club 09/2018 - 06/2022
+                </h4>
+                <h5>
+                    Participated in lessons and group study sessions intended to prepare student members for coding
+                    competitions; competed in a wide range of CS competitions
+                </h5>
+                <br/>
+                <h4>
+                    University of Pennsylvania Engineering Summer Academy (ESAP) Complex Networks Course, Summer 2020
+                </h4>
+                <h5>
+                    Learned complex networks and how to represent some of these complex networks through software code.
+                    Learned data science skills and utilized them to analyze the current worldwide pandemic through
+                    epidemiological models
+                </h5>
+
+            </main>
         </>
 
     )

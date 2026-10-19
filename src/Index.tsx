@@ -1,9 +1,9 @@
 import './App.css'
-import {UserContext} from "./App.tsx"
+import {setData} from "./App.tsx"
 
 
 export default function Index() {
-    UserContext = "Index";
+    setData("Index");
     return (
         <>
             <main>
