@@ -5,10 +5,10 @@ import './App.css'
 
 
 export default function Education() {
-    document.title='Education | Resume';
     return (
         <>
             <main>
+                <title>Education | Resume</title>
                 <div id="img-wrapper">
                     <img src={stuyvesant} alt="Stuyvesant High School Logo"/>
                     <img src={bostonUniversity} alt="Boston University Logo"/>

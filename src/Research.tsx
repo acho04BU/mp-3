@@ -1,15 +1,17 @@
 import './App.css'
 
 export default function Research(){
-    document.title='Research | Resume';
 
     return (
         <>
             <main>
+                <title>Research | Resume</title>
                 <h4>
-                    Researcher, Regeneron Science Talent Search, w/<a id="in-h4"
-                                                                      href="https://mfe.baruch.cuny.edu/maticivan">Prof.
-                    Matic</a> Summer 2020-22
+                    Researcher, Regeneron Science Talent Search, w/
+                    <a id="in-h4" href="https://mfe.baruch.cuny.edu/maticivan">
+                        Prof. Matic
+                    </a>
+                    Summer 2020-22
                 </h4>
                 <h5>
                     Discovered methodology to improve upon types of Binary Search Trees (trees used to hold data) called

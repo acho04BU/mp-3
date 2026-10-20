@@ -3,7 +3,6 @@ import Calculator from "./Calculator.tsx";
 import {useState} from "react";
 
 export default function Projects() {
-    document.title='Projects | Resume';
 
     const [first, setFirst] = useState(0);
     const [second, setSecond]= useState(0);
@@ -12,6 +11,7 @@ export default function Projects() {
     return (
         <>
             <main>
+                <title>Projects | Resume</title>
                 <div id="helmet-wrapper">
                     <div id="calc-wrapper">
                         <div id="input-wrapper">

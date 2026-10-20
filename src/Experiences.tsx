@@ -2,11 +2,11 @@ import './App.css'
 
 
 export default function Experiences() {
-    document.title='Experiences | Resume';
 
     return (
         <>
             <main>
+                <title>Experiences | Resume</title>
                 <h3>COMPUTER SCIENCE</h3>
                 <h4>
                     Intern, Hunet AI Department Summer 2022

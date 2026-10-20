@@ -2,11 +2,11 @@ import './App.css'
 import photo from "./assets/alex_cho_photo.jpeg";
 
 export default function Index() {
-    document.title='Home | Resume';
 
     return (
         <>
             <main>
+                <title>Home | Resume</title>
                 <img src={photo} alt="Alex Cho"/>
                 <p>
                     Hello! My name is Alex Cho, and I am a student at Boston University studying Computer Science.
