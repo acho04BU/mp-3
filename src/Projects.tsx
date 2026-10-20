@@ -7,6 +7,7 @@ export default function Projects() {
     const [first, setFirst] = useState(0);
     const [second, setSecond]= useState(0);
     const [output, setOutput]=useState('');
+    const [oColor, setOColor]=useState('black');
 
     return (
         <>
@@ -29,17 +30,17 @@ export default function Projects() {
                             />
                         </div>
                         <div id="buttons-wrapper">
-                            <button onClick={() => Calculator("add",first,second,setFirst,setSecond,setOutput)}>+</button>
-                            <button onClick={() => Calculator("subtract",first,second,setFirst,setSecond,setOutput)}>-</button>
-                            <button onClick={() => Calculator("multiply",first,second,setFirst,setSecond,setOutput)}>*</button>
-                            <button onClick={() => Calculator("divide",first,second,setFirst,setSecond,setOutput)}>/</button>
-                            <button onClick={() => Calculator("power",first,second,setFirst,setSecond,setOutput)}>**</button>
-                            <button onClick={() => Calculator("clear",first,second,setFirst,setSecond,setOutput)}>clear</button>
+                            <button onClick={() => Calculator("add",first,second,setFirst,setSecond,setOutput, setOColor)}>+</button>
+                            <button onClick={() => Calculator("subtract",first,second,setFirst,setSecond,setOutput,setOColor)}>-</button>
+                            <button onClick={() => Calculator("multiply",first,second,setFirst,setSecond,setOutput,setOColor)}>*</button>
+                            <button onClick={() => Calculator("divide",first,second,setFirst,setSecond,setOutput,setOColor)}>/</button>
+                            <button onClick={() => Calculator("power",first,second,setFirst,setSecond,setOutput,setOColor)}>**</button>
+                            <button onClick={() => Calculator("clear",first,second,setFirst,setSecond,setOutput,setOColor)}>clear</button>
                         </div>
                     </div>
                 </div>
                 <div id="aligner">
-                    <p id="output">{output}</p>
+                    <p id="output" color={oColor}>{output}</p>
                 </div>
             </main>
         </>
