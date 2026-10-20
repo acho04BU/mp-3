@@ -7,6 +7,12 @@ function jarvis_says(x:string,setOutput:any){
 }
 
 function computer(op:string,first:number,second:number,setFirst: (arg0: number) => void, setSecond: (arg0: number) => void, setOutput: (arg0: string) => void){
+    if (op ==="clear"){
+        setFirst(0);
+        setSecond(0);
+        setOutput("");
+        return;
+    }
     let x = 0;
     if (isNaN(Number(first))|| isNaN(Number(second))){
         jarvis_says("Invalid input(s)",setOutput);
@@ -41,11 +47,7 @@ function computer(op:string,first:number,second:number,setFirst: (arg0: number) 
                 }
             }
             break;
-        case "clear":
-            setFirst(0);
-            setSecond(0);
-            setOutput("");
-            break;
+
     }
     if(op !== "clear"){
         //if (x < 0) output.style.color = "red";
